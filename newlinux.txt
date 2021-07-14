@@ -1,0 +1,85 @@
+Top
+========
+top
+To exit after 10 refreshes
+top -n 10
+
+To display processes of a user
+top -u sai
+
+df
+=======
+To display all the file systems
+df -a
+
+To see the size in 1024 multiples
+df -f /home/ubuntu
+
+To see the grand total
+df --total
+
+To see the file fromat
+df -T /home/ubuntu
+
+du
+======
+du
+
+du -h /etc
+
+netstat
+=============
+Listing all ports tcp and udp
+netstat -a
+
+Only tcp port connections
+netstat -at
+
+Only udp port connections
+netstat -au
+
+
+
+
+Creating users
+======================
+sudo useradd username
+
+To create user with different home directory
+useradd -d /tmp/d1 username
+
+To create a user with a specific uid
+useradd -u 2222 username
+
+Create a user with an expiry date
+useradd -e 2020-04-30 username
+
+To see this info
+chage -l username
+
+To create user with customised comments
+useradd -c "some msg" username
+
+To specify a shell
+useradd -s /sbin/nologin username
+
+=======================================================================
+Creating groups
+---------------------
+groupadd groupname
+To add a new user to a group
+useradd -g groupname username
+To add an exisiting user to a group
+usermod -d groupname username
+
+
+
+
+
+
+
+
+
+
+
+
